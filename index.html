@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Укладка плитки и керамогранита в Ялте | Мастер Артур</title>
+    <meta name="description" content="Профессиональная укладка плитки и крупноформатного керамогранита до 120х60 см в Ялте, Гурзуфе, Ливадии, Никите, Алупке, Симеизе (до 20 км). Запил под 45°, эпоксидная затирка, гарантия.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #0f1115;
+            --bg-card: #181b22;
+            --bg-dark: #090a0c;
+            --accent: #d4af37;
+            --accent-hover: #f1c40f;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #2a2e39;
+            --telegram: #0088cc;
+            --max-btn: #eb681e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 17, 21, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-accent {
+            color: var(--accent);
+            margin-right: 4px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 18px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .header-contacts {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-sm {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+
+        .btn-telegram {
+            background: var(--telegram);
+            color: #fff;
+        }
+
+        .btn-telegram:hover {
+            opacity: 0.9;
+        }
+
+        .btn-max {
+            background: var(--max-btn);
+            color: #fff;
+        }
+
+        .btn-max:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 70px;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-main) 100%);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            max-width: 750px;
+        }
+
+        .city-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .city-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .city-tag i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-item i {
+            color: var(--accent);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-dark {
+            background-color: var(--bg-dark);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .portfolio-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .portfolio-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .reviewer-loc {
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .stars {
+            color: #f1c40f;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* Price Table */
+        .price-table {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row.highlight {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Calculator */
+        .calc-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .calc-group {
+            margin-bottom: 25px;
+        }
+
+        .calc-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .calc-input {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            color: #fff;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .calc-slider {
+            width: 100%;
+            accent-color: var(--accent);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .calc-result {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .total-price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 10px 0 20px;
+        }
+
+        .calc-buttons {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        /* Contacts Cards */
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .footer {
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero-features {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .price-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .calc-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">АРТУР</span>ПЛИТКА
+            </a>
+            <nav class="nav">
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#portfolio" class="nav-link">Работы</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#prices" class="nav-link">Цены</a>
+                <a href="#calculator" class="nav-link">Калькулятор</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:+79785009434" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> +7 (978) 500-94-34
+                </a>
+                <a href="https://t.me/79785009434" target="_blank" class="btn btn-sm btn-telegram">
+                    <i class="fa-brands fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">Премиальное качество • Выезд до 20 км</div>
+                <h1 class="hero-title">Укладка плитки и керамогранита в Ялте</h1>
+                <p class="hero-subtitle">Специализируюсь на крупном формате до <strong>120 × 60 см</strong>. Идеальные углы под 45°, эпоксидная затирка, гарантия качества.</p>
+                
+                <div class="city-tags">
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Ялта</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Гурзуф</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Ливадия</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Никита</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Гаспра</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Кореиз</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Алупка</span>
+                    <span class="city-tag"><i class="fa-solid fa-location-dot"></i>Симеиз</span>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <span>Точность до мм</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Гарантия на работу</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Проф. инструмент</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#calculator" class="btn btn-primary">Рассчитать стоимость</a>
+                    <a href="https://t.me/79785009434" target="_blank" class="btn btn-telegram">
+                        <i class="fa-brands fa-telegram"></i> Telegram
+                    </a>
+                    <a href="tel:+79785009434" class="btn btn-max">
+                        <i class="fa-solid fa-comment-dots"></i> Написать в МАКС
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Пример Работ (Портфолио) -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Примеры наших работ</h2>
+            <p class="section-desc">Реализованные объекты по Большой Ялте — от террас до санузлов под ключ</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Крупноформатный керамогранит" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Ливадия • Керамогранит 120х60</span>
+                        <h3 class="portfolio-title">Ванная комната в частном доме</h3>
+                        <p class="portfolio-desc">Укладка крупного формата под мрамор, запил внешних углов под 45°, установка скрытого люка.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80" alt="Эпоксидная затирка и душевая" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Гурзуф • Запил 45°</span>
+                        <h3 class="portfolio-title">Душевой поддон в один уровень</h3>
+                        <p class="portfolio-desc">Формирование уклона к трапу, обмазочная гидроизоляция и эпоксидная затирка швов.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Терраса с видом на море" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Алупка • Открытая терраса</span>
+                        <h3 class="portfolio-title">Облицовка уличной террасы</h3>
+                        <p class="portfolio-desc">Укладка морозостойкого керамогранита с запасом на температурные расширения и уклон для воды.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы Клиентов -->
+    <section id="reviews" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Отзывы заказчиков</h2>
+            <p class="section-desc">Что говорят клиенты о качестве и сроках выполнения работ</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer-name">Сергей и Анна</div>
+                            <div class="reviewer-loc">г. Ялта (Ливадия)</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">«Артур выкладывал нам керамогранит 120х60 в санузле. Запил углов под 45° сделан просто идеально, швы ровные, эпоксидка легла аккуратно. Очень аккуратный мастер, после работы всё убрал. Рекомендуем!»</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer-name">Михаил</div>
+                            <div class="reviewer-loc">пгт. Гурзуф</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">«Искали мастера для террасы у моря. Артур подсказал по клею и гидроизоляции, чтобы плитку не подорвало со временем. Сделал быстро, по смете всё четко без сюрпризов. Спасибо!»</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer-name">Елена Викторовна</div>
+                            <div class="reviewer-loc">г. Алупка</div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">«Делали ремонт в квартире под сдачу. Плитка уложена идеально по уровню. Все коронки под смесители и розетки ровные. И главное — закончил точно в обещанный день!»</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Прайс-лист -->
+    <section id="prices" class="section">
+        <div class="container">
+            <h2 class="section-title">Прайс-лист на основные работы</h2>
+            <div class="price-table">
+                <div class="price-row">
+                    <span>Укладка керамогранита (до 60х60 см)</span>
+                    <span class="price">от 2 200 ₽/м²</span>
+                </div>
+                <div class="price-row highlight">
+                    <span>Укладка крупного формата (120х60 см)</span>
+                    <span class="price">от 2 800 ₽/м²</span>
+                </div>
+                <div class="price-row">
+                    <span>Запил угла под 45° (усовка)</span>
+                    <span class="price">1 200 ₽/пог.м</span>
+                </div>
+                <div class="price-row">
+                    <span>Эпоксидная затирка швов</span>
+                    <span class="price">700 ₽/м²</span>
+                </div>
+                <div class="price-row">
+                    <span>Цементная затирка швов</span>
+                    <span class="price">300 ₽/м²</span>
+                </div>
+                <div class="price-row">
+                    <span>Обмазочная гидроизоляция (2 слоя + лента)</span>
+                    <span class="price">600 ₽/м²</span>
+                </div>
+                <div class="price-row">
+                    <span>Отверстие в керамограните (алмазное коронкование)</span>
+                    <span class="price">400 ₽/шт.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Калькулятор -->
+    <section id="calculator" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Интерактивный калькулятор сметы</h2>
+            <div class="calc-box">
+                <div class="calc-group">
+                    <label>Формат плитки:</label>
+                    <select id="tileType" class="calc-input">
+                        <option value="2200">Стандарт / Керамогранит (до 60х60 см) — 2 200 ₽/м²</option>
+                        <option value="2800" selected>Крупный формат (120х60 см) — 2 800 ₽/м²</option>
+                        <option value="3500">Мозаика / Сложный декор — 3 500 ₽/м²</option>
+                    </select>
+                </div>
+
+                <div class="calc-group">
+                    <label>Площадь укладки (м²): <span id="areaValue">25</span> м²</label>
+                    <input type="range" id="areaRange" min="5" max="150" value="25" class="calc-slider">
+                </div>
+
+                <div class="calc-group">
+                    <label>Дополнительные работы:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="epoxyGrout" value="700"> Эпоксидная затирка (+700 ₽/м²)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="hydro" value="600"> Гидроизоляция (+600 ₽/м²)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="prep" value="800"> Подготовка / выравнивание (+800 ₽/м²)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="calc-group">
+                    <label>Запил под 45° (пог. метры):</label>
+                    <input type="number" id="miterMeters" min="0" value="0" class="calc-input" placeholder="0 м">
+                </div>
+
+                <div class="calc-result">
+                    <div class="total-label">Ориентировочная стоимость:</div>
+                    <div class="total-price"><span id="totalSum">0</span> ₽</div>
+                    <div class="calc-buttons">
+                        <button id="sendToTg" class="btn btn-telegram btn-full">
+                            <i class="fa-brands fa-telegram"></i> В Telegram
+                        </button>
+                        <button id="sendToMax" class="btn btn-max btn-full">
+                            <i class="fa-solid fa-comment-dots"></i> В МАКС / Звонок
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Свяжитесь со мной для замера</h2>
+            <p class="section-desc">Выезд на объект: Ялта, Гурзуф, Ливадия, Никита, Гаспра, Кореиз, Алупка, Симеиз (до 20 км)</p>
+            
+            <div class="contact-cards">
+                <a href="tel:+79785009434" class="contact-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+7 (978) 500-94-34</span>
+                </a>
+                <a href="https://t.me/79785009434" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="tel:+79785009434" class="contact-card">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>МАКС</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© 2026 Мастер-плиточник Артур. Ялта и окрестности до 20 км.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tileTypeSelect = document.getElementById('tileType');
+            const areaRange = document.getElementById('areaRange');
+            const areaValue = document.getElementById('areaValue');
+            const epoxyGrout = document.getElementById('epoxyGrout');
+            const hydro = document.getElementById('hydro');
+            const prep = document.getElementById('prep');
+            const miterMeters = document.getElementById('miterMeters');
+            const totalSum = document.getElementById('totalSum');
+
+            function calculateTotal() {
+                const area = parseFloat(areaRange.value);
+                areaValue.textContent = area;
+
+                let pricePerMeter = parseFloat(tileTypeSelect.value);
+
+                if (epoxyGrout.checked) pricePerMeter += parseFloat(epoxyGrout.value);
+                if (hydro.checked) pricePerMeter += parseFloat(hydro.value);
+                if (prep.checked) pricePerMeter += parseFloat(prep.value);
+
+                let total = area * pricePerMeter;
+
+                const miters = parseFloat(miterMeters.value) || 0;
+                total += miters * 1200;
+
+                totalSum.textContent = total.toLocaleString('ru-RU');
+                return { total, area, miters };
+            }
+
+            tileTypeSelect.addEventListener('change', calculateTotal);
+            areaRange.addEventListener('input', calculateTotal);
+            epoxyGrout.addEventListener('change', calculateTotal);
+            hydro.addEventListener('change', calculateTotal);
+            prep.addEventListener('change', calculateTotal);
+            miterMeters.addEventListener('input', calculateTotal);
+
+            calculateTotal();
+
+            function getMessageText() {
+                const { total, area, miters } = calculateTotal();
+                const tileName = tileTypeSelect.options[tileTypeSelect.selectedIndex].text.split('—')[0].trim();
+
+                let message = `Здравствуйте, Артур! Хочу проконсультироваться по укладке плитки.\n\n`;
+                message += `📋 *Расчет сметы:*\n`;
+                message += `• Формат: ${tileName}\n`;
+                message += `• Площадь: ${area} м²\n`;
+                if (epoxyGrout.checked) message += `• Эпоксидная затирка: Да\n`;
+                if (hydro.checked) message += `• Гидроизоляция: Да\n`;
+                if (prep.checked) message += `• Выравнивание: Да\n`;
+                if (miters > 0) message += `• Запил под 45°: ${miters} пог. м\n`;
+                message += `\n💰 *Примерная сумма:* ${total.toLocaleString('ru-RU')} ₽`;
+                return message;
+            }
+
+            document.getElementById('sendToTg').addEventListener('click', () => {
+                const text = encodeURIComponent(getMessageText());
+                window.open(`https://t.me/79785009434?text=${text}`, '_blank');
+            });
+
+            document.getElementById('sendToMax').addEventListener('click', () => {
+                window.open('tel:+79785009434', '_self');
+            });
+        });
+    </script>
+</body>
+</html>
